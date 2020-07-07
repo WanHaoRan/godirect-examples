@@ -23,7 +23,7 @@ logging.getLogger('bleak').propagate = False
 # The first USB device found will be used. If no USB devices are found, then 
 # the BLE device with the strongest signal over -100dB is used.
 # Note that you can choose to enable USB, BLE, or both. By default both will be enabled.
-godirect = GoDirect(use_ble=True,use_usb=True)
+godirect = GoDirect(use_ble=False,use_usb=True)
 print("GoDirect v"+str(godirect.get_version()))
 print("\nSearching...", flush=True, end ="")
 device = godirect.get_device(threshold=-100)
